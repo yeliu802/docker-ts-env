@@ -1,0 +1,11 @@
+version: '2'
+services:
+  tensorflow_jupyter:
+    build: ./
+    volumes:
+      - ./config:/root/.jupyter
+      - ./notebook:/notebook
+    ports:
+      - "8888:8888"
+    environment:
+      - PASSWORD=123
